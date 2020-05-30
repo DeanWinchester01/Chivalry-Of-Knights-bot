@@ -11,4 +11,4 @@ bot.on("ready",()=>{
 });
 
 
-bot.login("NzE2NDE5MzQ2MjcxODMwMDU2.XtLfiQ.tOli3UnJO3hrPvYx-P29qJInL0g");
+bot.login("NzE2NDE5MzQ2MjcxODMwMDU2.XtLlMg.P0OALt4pqX2-66hMTErlVi6gkIs");
