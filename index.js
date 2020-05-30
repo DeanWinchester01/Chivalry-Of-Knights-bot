@@ -7,7 +7,7 @@ var general;
 bot.on("ready",()=>{
     guild = bot.guilds.cache.get("716394235212988496");
     general = guild.channels.cache.get("716394235212988500");
-    general.send("hi guys! I'm the new personal bot for this server, please give me suggestions in the server and <@400458098612895755> might implement them :)");
+    general.send("<@everyone>");
 });
 
 
