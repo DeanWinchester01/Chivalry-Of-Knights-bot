@@ -11,7 +11,7 @@ bot.on("ready",()=>{
 
 bot.on("message",message=>{
     var guild = message.guild;
-    var world = guild.member("400458098612895755");
+    var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
             var suggestion = message.content.split("-suggest ".length)[0];
