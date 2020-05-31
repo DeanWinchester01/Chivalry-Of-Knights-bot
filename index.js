@@ -7,7 +7,7 @@ var general;
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
-    general.send("I've been updated a bit, so now if you want to suggest commands then you will need to dm them to me (this is to make it so the channels dont get filled with commands if there comes a lot)")
+    general.send("You make a suggestion using the command -suggest btw");
 });
 
 bot.on("message",message=>{
