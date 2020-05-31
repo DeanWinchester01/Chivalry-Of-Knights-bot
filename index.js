@@ -14,7 +14,7 @@ bot.on("message",message=>{
     var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
-            var suggestion = message.content.split("-suggest ".length)[1];
+            var suggestion = message.content.slice("-suggest this ".length);
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
