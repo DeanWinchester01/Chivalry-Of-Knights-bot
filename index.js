@@ -1,13 +1,23 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
 
-var guild;
+var server;
 var general;
 
 bot.on("ready",()=>{
-    guild = bot.guilds.cache.get("716394235212988496");
-    general = guild.channels.cache.get("716394235212988500");
-    general.send("<@everyone>");
+    server = bot.guilds.cache.get("716394235212988496");
+    general = server.channels.cache.get("716394235212988500");
+});
+
+bot.on("message",message=>{
+    var guild = message.guild;
+    var world = guild.member("400458098612895755");
+    if(!message.guild){
+        if(message.content.startsWith("-suggest")){
+            var suggestion = message.content.split("-suggest ".length)[0];
+            world.send(message.author+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
+        }
+    }
 });
 
 
