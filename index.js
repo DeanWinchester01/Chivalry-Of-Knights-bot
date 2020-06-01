@@ -21,9 +21,9 @@ bot.on("message",message=>{
     }
     if(message.content.startsWith("-")){
         var language = message.content.slice(1,-0);
-        message.channel.send(language);
-        var send = message.content
+        var send = message.content;
         message.delete();
+        message.channel.send(language);
     }
 });
 
