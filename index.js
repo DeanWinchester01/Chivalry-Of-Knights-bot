@@ -19,12 +19,9 @@ bot.on("message",message=>{
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
-    if(message.content.startsWith("-")){
-        var language = message.content.split("\n")[1];
-        var lang = language.split("-")[1];
-        var send = message.content;
-        message.delete();
-        message.channel.send(lang);
+    if(message.content.startsWith("-lua")){
+        var message_to_send = message.content.slice(4,-3);
+        message.channel.send("```lua\n"+message_to_send+"n```");
     }
 });
 
