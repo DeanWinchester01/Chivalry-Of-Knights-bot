@@ -7,6 +7,7 @@ var general;
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
+    console.log("ready");
 });
 
 bot.on("message",message=>{
