@@ -20,8 +20,8 @@ bot.on("message",message=>{
         }
     }
     if(message.content.startsWith("-")){
-        var language = message.content.split("\n")[0];
-        var lang = language.split("-")[0];
+        var language = message.content.split("\n")[1];
+        var lang = language.split("-")[1];
         var send = message.content;
         message.delete();
         message.channel.send(lang);
