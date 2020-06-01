@@ -18,6 +18,12 @@ bot.on("message",message=>{
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
+    if(message.content.startsWith("-")){
+        var language = message.content.slice(1,-1);
+        message.channel.send(language);
+        var send = message.content
+        message.delete();
+    }
 });
 
 
