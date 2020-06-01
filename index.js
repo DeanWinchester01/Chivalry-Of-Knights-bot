@@ -7,7 +7,6 @@ var general;
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
-    general.send("Because im stuper smart ;)");
 });
 
 bot.on("message",message=>{
