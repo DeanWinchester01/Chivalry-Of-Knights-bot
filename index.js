@@ -22,17 +22,17 @@ bot.on("message",message=>{
     if(message.content.startsWith("-lua")){
         var message_to_send = message.content.slice(4);
         message.delete();
-        message.channel.send("Posted by "+message.member.nickname+"\n\`\`\`lua\n"+message_to_send+"\n\`\`\`");
+        message.channel.send("Posted by "+message.member.displayName+"\n\`\`\`lua\n"+message_to_send+"\n\`\`\`");
     }
     if(message.content.startsWith("-js")){
         var message_to_send = message.content.slice(3);
         message.delete();
-        message.channel.send("Posted by "+message.member.nickname+"\n\`\`\`js\n"+message_to_send+"\n\`\`\`");
+        message.channel.send("Posted by "+message.member.displayName+"\n\`\`\`js\n"+message_to_send+"\n\`\`\`");
     }
     if(message.content.startsWith("-html")){
         var message_to_send = message.content.slice(5);
         message.delete();
-        message.channel.send("Posted by "+message.member.nickname+"\n\`\`\`html\n"+message_to_send+"\n\`\`\`");
+        message.channel.send("Posted by "+message.member.displayName+"\n\`\`\`html\n"+message_to_send+"\n\`\`\`");
     }
 });
 
