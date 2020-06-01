@@ -21,7 +21,7 @@ bot.on("message",message=>{
     }
     if(message.content.startsWith("-lua")){
         var message_to_send = message.content.slice(4,-3);
-        message.channel.send("```lua\n"+message_to_send+"n```");
+        message.channel.send("\`\`\`lua\n"+message_to_send+"n\`\`\`");
     }
 });
 
