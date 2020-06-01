@@ -23,6 +23,14 @@ bot.on("message",message=>{
         var message_to_send = message.content.slice(4);
         message.channel.send("\`\`\`lua\n"+message_to_send+"\n\`\`\`");
     }
+    if(message.content.startsWith("-js")){
+        var message_to_send = message.content.slice(3);
+        message.channel.send("\`\`\`js\n"+message_to_send+"\n\`\`\`");
+    }
+    if(message.content.startsWith("-html")){
+        var message_to_send = message.content.slice(5);
+        message.channel.send("\`\`\`html\n"+message_to_send+"\n\`\`\`");
+    }
 });
 
 
