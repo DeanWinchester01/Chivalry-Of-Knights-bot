@@ -8,8 +8,8 @@ bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
     var embed = new discord.MessageEmbed()
-    .setDescription("```lua\n")
-    .setDescription("--code\n```");
+    .addField(``,null,true)
+    .addField(`lua\n--code```);
     server.channels.cache.get("717158666125705246").send(embed);
     console.log("ready");
 });
