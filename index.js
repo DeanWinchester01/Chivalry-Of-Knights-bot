@@ -7,7 +7,9 @@ var general;
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
-    server.channels.cache.get("717158666125705246").send("\`\`\`lua\nprint(\"this is for a test\")\n\`\`\`");
+    var embed = new discord.MessageEmbed()
+    .setDescription("```lua\nprint(\"this is for a test\")\n```");
+    server.channels.cache.get("717158666125705246").send(embed);
     console.log("ready");
 });
 
