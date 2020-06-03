@@ -11,7 +11,7 @@ bot.on("ready",()=>{
 });
 
 bot.on("message",message=>{
-    if(message.author.id == "716419346271830056") return;
+    if(message.author.id && message.author.id != "717788954107314326") return;
     message.channel.send("the bots id is "+message.author.id);
     var guild = message.guild;
     var world = server.member("400458098612895755");
