@@ -1,6 +1,5 @@
 const discord = require("discord.js");
 const bot = new discord.Client();
-var webhookbot = "717788954107314326"
 var server;
 var general;
 
@@ -11,7 +10,6 @@ bot.on("ready",()=>{
 });
 
 bot.on("message",message=>{
-    var guild = message.guild;
     var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
