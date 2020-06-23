@@ -18,8 +18,8 @@ bot.on("message",message=>{
         }
     }
     if(message.content.startsWith("-poll")){
-        message.react(":thumbsup:").then(()=>{
-            message.react(":thumbsdown:")
+        message.react("👍").then(()=>{
+            message.react("👎")
         });
     }
     if(message.content.startsWith("-lua")){
