@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const bot = new discord.Client();
 var server;
 var general;
+var array = [1="one",2="two",3="three",4="four",5="five",6="six",7="seven",8="eight",9="nine"];
 
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
@@ -18,9 +19,16 @@ bot.on("message",message=>{
         }
     }
     if(message.content.startsWith("-poll")){
-        message.react("👍").then(()=>{
-            message.react("👎")
-        });
+        var words = message.content.split(" ");
+        if(Number(words[1])){
+            for(var i = 1; i < Number(words[1]); i++){
+                world.send(array[i]);
+            }
+        }else{
+            message.react("👍").then(()=>{
+                message.react("👎")
+            });
+        }
     }
     if(message.content.startsWith("-lua")){
         var message_to_send = message.content.slice(4);
