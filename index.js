@@ -22,7 +22,7 @@ bot.on("message",message=>{
         var words = message.content.split(" ");
         if(Number(words[1])){
             for(var i = 1; i < Number(words[1]); i++){
-                message.guild.channels.cache.get("717158666125705246").send(array[i]);
+                message.channel.send(array[i]);
             }
         }else{
             message.react("👍").then(()=>{
