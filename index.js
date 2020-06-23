@@ -21,7 +21,7 @@ bot.on("message",message=>{
     if(message.content.startsWith("-poll")){
         var words = message.content.split(" ");
         if(Number(words[1])){
-            for(var i = 1; i < Number(words[1]); i++){
+            for(var i = 1; i <= Number(words[1]); i++){
                 message.channel.send(array[i]);
             }
         }else{
