@@ -18,8 +18,9 @@ bot.on("message",message=>{
         }
     }
     if(message.content.startsWith("-poll")){
-        var suggestion = message.content.slice(6);
-        world.send(suggestion);
+        message.react(":thumbsup:").then(()=>{
+            message.react(":thumbsdown:")
+        });
     }
     if(message.content.startsWith("-lua")){
         var message_to_send = message.content.slice(4);
