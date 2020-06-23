@@ -17,8 +17,8 @@ bot.on("message",message=>{
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
-    if(message.content.startsWith("-suggest")){
-        var suggestion = message.content.sub(9);
+    if(message.content.startsWith("-poll")){
+        var suggestion = message.content.slice(9,message.content.length);
         world.send(suggestion);
     }
     if(message.content.startsWith("-lua")){
