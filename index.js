@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const bot = new discord.Client();
 var server;
 var general;
-var array = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣","\:kepcap_ten:"];
+var array = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"];
 
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
