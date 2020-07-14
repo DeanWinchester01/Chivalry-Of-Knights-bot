@@ -11,7 +11,7 @@ bot.on("ready",()=>{
 });
 
 bot.on("message",message=>{
-    message.channel.messages.fetch().then(messages => world.send("found"+messages.filter(m => m.mentions())));
+    message.channel.messages.fetch().then(messages => world.send("found"+messages.filter(m => m.mentions)));
     var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
