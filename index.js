@@ -11,6 +11,14 @@ bot.on("ready",()=>{
 });
 
 bot.on("message",message=>{
+    if(message.author.bot){
+        if(message.content.includes("Success")){
+            setTimeout(()=>{
+                message.delete();
+            })
+        }
+    }
+    if(message.author.bot) return;
     var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
@@ -25,7 +33,7 @@ bot.on("message",message=>{
                 if(Number(split[1] == 100)){
                     message.channel.bulkDelete(100)
                 }else{
-                    message.channel.bulkDelete(split[1]+1).catch(e).then(e=>{message.channel.send("Error\n"+e)});
+                    message.channel.bulkDelete(split[1]+1).catch(e=> message.channel.send("Error\n"+e)).then(()=>message.channel.send("Successfully deleted "+split[1]+1+" messages"));
                 }
                 
             }
