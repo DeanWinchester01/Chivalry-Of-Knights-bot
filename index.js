@@ -24,6 +24,7 @@ bot.on("message",message=>{
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
+    
     if(message.channel.id == "725041470289215629"){
         if(message.content.startsWith("-poll")){
             var words = message.content.split(" ");
