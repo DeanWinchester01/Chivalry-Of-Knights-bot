@@ -7,7 +7,7 @@ var array = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️�
 bot.on("ready",()=>{
     server = bot.guilds.cache.get("716394235212988496");
     general = server.channels.cache.get("716394235212988500");
-    console.log("ready");
+    console.log("test update");
 });
 
 bot.on("message",message=>{
