@@ -15,7 +15,7 @@ bot.on("message", message => {
         if(message.content.includes("Success")){
             setTimeout(()=>{
                 message.delete();
-            })
+            },2000);
         }
     }
     if (message.author.bot) return;
