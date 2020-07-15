@@ -25,7 +25,7 @@ bot.on("message",message=>{
                 if(Number(split[1] == 100)){
                     message.channel.bulkDelete(100)
                 }else{
-                    message.channel.bulkDelete(split[1]+1).catch(e).then(()=>{message.channel.send("Error\n"+e)});
+                    message.channel.bulkDelete(split[1]+1).catch(e).then(e=>{message.channel.send("Error\n"+e)});
                 }
                 
             }
