@@ -22,7 +22,7 @@ bot.on("message",message=>{
         if(message.author.id == "400458098612895755"||message.author.id == "335646533372346368"||message.author.id == "419537302046375936"){
             var split = message.content.split(" ");
             if(Number(split[1])){
-                message.channel.bulkDelete(split[1]+1);
+                message.channel.bulkDelete(split[1]+1).catch(e).then(()=>{console.log(e)});
             }
         }
     }
