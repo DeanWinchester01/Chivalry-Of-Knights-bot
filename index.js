@@ -11,13 +11,13 @@ bot.on("ready", () => {
 });
 
 bot.on("message", message => {
-    /*if(message.author.bot){
+    if(message.author.bot){
         if(message.content.includes("Success")){
             setTimeout(()=>{
                 message.delete();
             })
         }
-    }*/
+    }
     if (message.author.bot) return;
     var world = server.member("400458098612895755");
     if (!message.guild) {
@@ -34,7 +34,6 @@ bot.on("message", message => {
                     message.channel.bulkDelete(100)
                 } else {
                     message.channel.bulkDelete(Number(split[1]+1)).then(() => message.channel.send("Successfully deleted " + Number(split[1])+1+ " messages")).catch(e => message.channel.send("Error\n" + e))
-                    console.log(Number(split[1])+1)
                 }
 
             }
