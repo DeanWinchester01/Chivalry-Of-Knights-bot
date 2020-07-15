@@ -18,7 +18,14 @@ bot.on("message",message=>{
             world.send(message.author.username+" made the suggestion\n"+suggestion).then(()=>message.channel.send("Thank you for your suggestion"));
         }
     }
-    
+    if(message.content.startsWith("-delete")){
+        if(message.author.id == "400458098612895755"||message.author.id == "335646533372346368"||message.author.id == "419537302046375936"){
+            var split = message.content.split(" ");
+            if(Number(split[1])){
+                message.channel.bulkDelete(split[1]);
+            }
+        }
+    }
     if(message.channel.id == "725041470289215629"){
         if(message.content.startsWith("-poll")){
             var words = message.content.split(" ");
