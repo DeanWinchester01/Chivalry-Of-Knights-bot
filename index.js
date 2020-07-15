@@ -12,11 +12,9 @@ bot.on("ready",()=>{
 
 bot.on("message",message=>{
     message.channel.messages.fetch()
-    .then(m => {
-        if(m.find("@")){
-            world.send("found\n"+m);
-        }
-    })
+    .then(
+        m=>world.send("found\n"+m.filter(m=>m.content.includes("@")));
+    )
     var world = server.member("400458098612895755");
     if(!message.guild){
         if(message.content.startsWith("-suggest")){
