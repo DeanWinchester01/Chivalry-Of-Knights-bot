@@ -33,7 +33,7 @@ bot.on("message", message => {
                 if (Number(split[1] == 100)) {
                     message.channel.bulkDelete(100)
                 } else {
-                    message.channel.bulkDelete(Number(split[1]+1)).then(() => message.channel.send("Successfully deleted " + Number(split[1])+1+ " messages")).catch(e => message.channel.send("Error\n" + e))
+                    message.channel.bulkDelete(Number(Number(split[1]+1))).then(() => message.channel.send("Successfully deleted " + Number(Number(split[1])+1)+ " messages")).catch(e => message.channel.send("Error\n" + e))
                 }
 
             }
